@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <title>Alldio Music Search</title>
 </head>
-<body>
-$END$
+<script src="index.js"></script>
+<body style="font-family: Georgia; color: navajowhite; background-color: #45351c; text-align: center">
+    <h1>Alldio Music Search - <i>Browse for music from everywhere, in one place</i></h1>
+    <hr>
+    <div style="min-width: 100%; background-color: navajowhite">
+        <input id="searchbar" type="text" width="1000px" style="margin: 10px auto 10px auto; min-width: 1000px; min-height: 30px; font-size: 20px; border: 2px solid black" placeholder="Search for something..."><button onclick="search()" style="margin: 10px auto 10px 10px; min-width: 100px; min-height: 30px; font-size: 20px; border: 2px solid black">Search</button>
+        <br><p style="color: black; font-size: 20px">Items returned per streaming service: <input id="amtsearch" type="number" width="100px" style="margin: auto auto 10px auto; min-width: 100px; min-height: 30px; font-size: 20px; border: 2px solid black" value="10" placeholder="10"></p>
+    </div>
+    <hr>
+
+    <hr>
+    <div style="margin: 10px auto 0px auto; display: block">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Tab1')" id="defaultOpen">Tracks</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab2')">Albums</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab3')">Artists</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab4')">Playlists</button>
+            <!-- Tab content -->
+            <div id="Tab1" class="tabcontent">
+                <h1>Tracks</h1>
+                <hr>
+                <table id="trackstable" style="margin: auto auto auto auto">
+
+                </table>
+                <br>
+            </div>
+
+            <div id="Tab2" class="tabcontent">
+                <h1>Albums</h1>
+            </div>
+
+            <div id="Tab3" class="tabcontent">
+                <h1>Artists</h1>
+            </div>
+
+            <div id="Tab4" class="tabcontent">
+                <h1>Playlists</h1>
+            </div>
+        </div>
+
+
+    </div>
+
 </body>
 </html>
