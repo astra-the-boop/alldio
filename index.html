@@ -11,7 +11,7 @@
     <hr>
     <div style="min-width: 100%; background-color: navajowhite">
         <input id="searchbar" type="text" width="1000px" style="margin: 10px auto 10px auto; min-width: 1000px; min-height: 30px; font-size: 20px; border: 2px solid black" placeholder="Search for something..."><button onclick="search()" style="margin: 10px auto 10px 10px; min-width: 100px; min-height: 30px; font-size: 20px; border: 2px solid black">Search</button>
-        <br><p style="color: black; font-size: 20px">Items returned per streaming service: <input id="amtsearch" type="number" width="100px" style="margin: auto auto 10px auto; min-width: 100px; min-height: 30px; font-size: 20px; border: 2px solid black" value="10" placeholder="10"></p>
+        <br><p style="color: black; font-size: 20px">Items returned per streaming service: <input id="amtsearch" type="number" width="100px" style="margin: auto auto 10px auto; min-width: 100px; min-height: 30px; font-size: 20px; border: 2px solid black" value="2" placeholder="Enter number"></p>
     </div>
     <hr>
 
@@ -34,14 +34,29 @@
 
             <div id="Tab2" class="tabcontent">
                 <h1>Albums</h1>
+                <hr>
+                <table id="albumstable" style="margin: auto auto auto auto">
+
+                </table>
+                <br>
             </div>
 
             <div id="Tab3" class="tabcontent">
-                <h1>Artists</h1>
+                <h1>Artists & Channels</h1>
+                <hr>
+                <table id="artiststable" style="margin: auto auto auto auto">
+
+                </table>
+                <br>
             </div>
 
             <div id="Tab4" class="tabcontent">
                 <h1>Playlists</h1>
+                <hr>
+                <table id="playliststable" style="margin: auto auto auto auto">
+
+                </table>
+                <br>
             </div>
         </div>
 
