@@ -17,7 +17,7 @@ let youtubeTracks = [[]//name
     , []                    //artist
 ];
 
-alert("If you're visiting for the first time, please make sure you add your API keys!! Once you have, you can remove this message on line 20 of index.js. Check README.md for more info")
+alert("If you're visiting for the first time, please make sure you add your API keys!! Once you have, you can remove this message on line 20 of index.js")
 
 let spotifyAlbums = [[], //name
 [],                             //link
@@ -104,12 +104,16 @@ async function search() {
                     spotifyArtists[3].push(item.images[0].url); //image
                 });
 
-                for (let i = 0; i < data.playlists.items.length; i += 2) {
+                for (let i = 0; i < data.playlists.items.length; i++) {
                     const item = data.playlists.items[i];
-                    spotifyPlaylists[0].push(item.name); // Track name
-                    spotifyPlaylists[1].push(item.external_urls.spotify); // Link
-                    spotifyPlaylists[2].push(item.description); // Description
-                    spotifyPlaylists[3].push(item.owner.display_name); // Owner
+
+                    if (item && item.name && item.external_urls.spotify && item.description && item.owner.display_name) {
+                        spotifyPlaylists[0].push(item.name); // Playlist name
+                        spotifyPlaylists[1].push(item.external_urls.spotify); // Playlist link
+                        spotifyPlaylists[2].push(item.description); // Playlist description
+                        spotifyPlaylists[3].push(item.owner.display_name); // Playlist owner
+                        console.log(item);
+                    }
                 }
 
 
@@ -272,7 +276,7 @@ async function search() {
                   <td style="border: solid 10px darkred; background-color: navajowhite; border-right: none; color: #45351c"><a style="color: #45351c" href="${youtubePlaylists[1][k]}" target="_blank"><h1>${youtubePlaylists[0][k]}</h1</a></td>
                   <td style="border: solid 10px darkred; background-color: navajowhite; border-left: none; border-right:none; color: #45351c"><b>Description: </b>${youtubePlaylists[2][k]}</td>
                   <td style="border: solid 10px darkred; background-color: navajowhite; border-left: none; border-right:none; color: #45351c">${youtubePlaylists[3][k]}</td>
-                  <td style="border: solid 10px darkred; background-color: navajowhite; border-left:none; color: #45351c"><img src="spotify.png" style="width: 70px"></td>
+                  <td style="border: solid 10px darkred; background-color: navajowhite; border-left:none; color: #45351c"><img src="youtube.png" style="width: 70px"></td>
               </tr>`
         }
     }
