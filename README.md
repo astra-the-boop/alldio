@@ -29,3 +29,5 @@ Here's the links to get them:
 Because Apple Music's API requires a $99 per annum subscription (I'm broke), I unfortunately cannot add that. :(
 
 SoundCloud's API App application is also closed as well, so as of now, I'm not able to sign up :(
+
+Deezer's API app application is closed as well# prepPerfect
